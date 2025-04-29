@@ -1,0 +1,17 @@
+.percentView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.bar {
+    width: 1000%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+}
