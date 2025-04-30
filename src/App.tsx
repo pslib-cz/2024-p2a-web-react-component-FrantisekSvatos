@@ -25,7 +25,7 @@ const App = () => {
     <>
       <ViewBox value={cislo + 1} max={100} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
       <ViewBox value={100} max={200} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
-      <ViewBox value={20} max={300} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
+      <ViewBox value={258} max={300} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
     </>
   )
 }
