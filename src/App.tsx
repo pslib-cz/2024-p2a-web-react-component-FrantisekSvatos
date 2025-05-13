@@ -1,5 +1,6 @@
 import './App.css'
 import ViewBox from './components/PercentView'
+import {useState} from 'react'
 // type ArrowType = (x: number) => number
 
 // const arrow1:ArrowType = (x) => x + 1
@@ -15,17 +16,16 @@ import ViewBox from './components/PercentView'
 //   )
 // }
 
-
-
 const App = () => {
-  let cislo: number = 34;
-  cislo -= 1;
-
+  const [rangeValue, setRangeValue] = useState(100)
+  const initialValue: number = 50;
+  
   return (
     <>
-      <ViewBox value={cislo + 1} max={100} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
-      <ViewBox value={100} max={200} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
-      <ViewBox value={258} max={300} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
+      <div>
+          <input type="range" min={0} max={200} onChange={(e) => setRangeValue(parseInt(e.target.value))} defaultValue={initialValue}></input>
+      </div>
+      <ViewBox value={rangeValue} max={200} makeColor={(p) => `hsl(${p * 100}, 100%, 50%)`}/>
     </>
   )
 }
